@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт Алии Свиридовой - преподавателя методики ТетаХилинг с опытом более 12 лет. Обучение, сессии и практикумы.">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Официальный сайт Алии Свиридовой" />
-    <meta property="og:description" content="Меня зовут Алия Свиридова. Я преподаватель методики ТетаХилинг с практическим опытом более 12 лет." />
-    <meta property="og:image" content="images/preview.jpg" /> <!-- Укажи путь к картинке в папке images -->
-    <meta property="og:url" content="https://sviridovaaliya.ru/" />
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Официальный сайт Алии Свиридовой">
+    <meta property="og:description" content="Меня зовут Алия Свиридова. Я преподаватель методики ТетаХилинг с практическим опытом более 12 лет.">
+    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:url" content="https://sviridovaaliya.ru/">
+    <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Официальный сайт Алии Свиридовой" />
-    <meta name="twitter:description" content="Меня зовут Алия Свиридова. Я преподаватель методики ТетаХилинг с практическим опытом более 12 лет." />
-    <meta name="twitter:image" content="images/preview.jpg" /> <!-- Укажи путь к картинке в папке images -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Официальный сайт Алии Свиридовой">
+    <meta name="twitter:description" content="Меня зовут Алия Свиридова. Я преподаватель методики ТетаХилинг с практическим опытом более 12 лет.">
+    <meta name="twitter:image" content="images/preview.jpg">
 
-    <title>Официальный сайт Алии Свиридовой</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Внешняя таблица стилей -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Официальный сайт Алии Свиридовой | ТетаХилинг</title>
+
+    <!-- Preload CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <style>
         * {
@@ -44,7 +49,7 @@
         }
         
         .hero-section {
-            min-height: 35vh; /* Уменьшенная высота */
+            min-height: 35vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -274,6 +279,7 @@
             margin-bottom: 15px;
             height: 180px;
             object-fit: cover;
+            display: block;
         }
         
         .btn {
@@ -391,6 +397,26 @@
             color: #a064a2;
         }
 
+        .achievements-list {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .achievements-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+        }
+
+        .achievements-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #a064a2;
+            font-weight: bold;
+        }
+
         @media (min-width: 768px) {
             .author-section {
                 flex-direction: row;
@@ -424,7 +450,7 @@
 
         @media (max-width: 767px) {
             .hero-section {
-                min-height: 30vh; /* Уменьшенная высота для мобильных */
+                min-height: 30vh;
             }
             
             .hero-title {
@@ -477,15 +503,15 @@
             <h2 class="hero-subtitle">Алии Свиридовой</h2>
         </div>
         
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Основное меню">
             <div class="nav-container">
                 <div class="social-links">
-                    <a href="https://t.me/aliyakati" class="social-link">
-                        <i class="fab fa-telegram social-icon"></i>
+                    <a href="https://t.me/aliyakati" class="social-link" rel="noopener noreferrer" aria-label="Telegram">
+                        <i class="fab fa-telegram social-icon" aria-hidden="true"></i>
                         <span>Telegram</span>
                     </a>
-                    <a href="https://www.instagram.com/aliyakatifovna/#" class="social-link">
-                        <i class="fab fa-instagram social-icon"></i>
+                    <a href="https://www.instagram.com/aliyakatifovna/#" class="social-link" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram social-icon" aria-hidden="true"></i>
                         <span>Instagram</span>
                     </a>
                 </div>
@@ -502,7 +528,6 @@
     </div>
 </section>
 
-<!-- Остальные секции остаются без изменений -->
 <!-- Секция "Об авторе" -->
 <section id="about" class="section">
     <div class="container">
@@ -511,29 +536,23 @@
             
             <div class="author-section">
                 <div class="author-info">
-                    <h3> Меня зовут Алия Свиридова. Я преподаватель методики ТетаХилинг с практическим опытом более <strong>12 лет</strong>. Работаю как инструктор по подсознательной трансформации и развитию мышления. </h3>
-
+                    <h3>Меня зовут Алия Свиридова. Я преподаватель методики ТетаХилинг с практическим опытом более <strong>12 лет</strong>. Работаю как инструктор по подсознательной трансформации и развитию мышления.</h3>
                     
-                  <p><br>
-                  </p>
-                    <p> У меня медицинское образование и более <strong>14 лет</strong> профессионального опыта в фармацевтической индустрии.&nbsp;</p>
-<p>&nbsp;</p>
-                    <p><strong>За это время я провел</strong><strong>а</strong>: </p>
-<p>&nbsp;</p>
-</p>
+                    <p>У меня медицинское образование и более <strong>14 лет</strong> профессионального опыта в фармацевтической индустрии.</p>
                     
-						<ul class="achievements-list">
-						  <li>Более <strong>3000</strong> индивидуальных тета-сессий,</li>
-						  <li><strong>25</strong> открытых мастер-классов,</li>
-						  <li><strong>5</strong> потоков обучения профессии Тетапрактик.</li>
-						  <li>&nbsp;</li>
-                  </ul>
+                    <p><strong>За это время я провела:</strong></p>
                     
-                  <h3> Моя работа строится на глубокой работе с подсознанием, уважении к внутренним процессам и понимании психосоматических связей. Я помогаю людям выявлять и трансформировать ограничивающие убеждения, развивать интуицию и возвращаться к состоянию целостности и внутренней гармонии. </h3>
+                    <ul class="achievements-list">
+                        <li>Более <strong>3000</strong> индивидуальных тета-сессий</li>
+                        <li><strong>25</strong> открытых мастер-классов</li>
+                        <li><strong>5</strong> потоков обучения профессии Тетапрактик</li>
+                    </ul>
+                    
+                    <h3>Моя работа строится на глубокой работе с подсознанием, уважении к внутренним процессам и понимании психосоматических связей. Я помогаю людям выявлять и трансформировать ограничивающие убеждения, развивать интуицию и возвращаться к состоянию целостности и внутренней гармонии.</h3>
                 </div>
                 
                 <div class="author-photo">
-                    <img src="images/author.jpg" alt="Алия Свиридова">
+                    <img src="images/author.jpg" alt="Алия Свиридова - инструктор Тетахилинга" loading="lazy">
                     <div style="background: linear-gradient(to top, rgba(107,73,109,0.6) 0%, transparent 100%); padding: 15px; text-align: center;">
                         <p style="color: white; margin: 0;">Алия Свиридова</p>
                         <p style="color: #f0d8f0; margin: 3px 0 0; font-size: 0.9rem;">Инструктор Тетахилинга</p>
@@ -552,19 +571,19 @@
             
             <div class="cards-container">
                 <div class="card">
-                  <img src="images/theta1.jpg" alt="Основы Тетахилинга">
+                    <img src="images/theta1.jpg" alt="Основы метода Тетахилинга" loading="lazy">
                     <h3>Основы метода</h3>
                     <p><strong>Тетахилинг</strong> - духовно-энергетическая практика, работающая с подсознанием через тета-состояние мозга (4-7 Гц). Метод создан Вианной Стайбл в 1995 году после её чудесного исцеления.</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/theta2.jpg" alt="Как работает">
+                    <img src="images/theta2.jpg" alt="Как работает Тетахилинг" loading="lazy">
                     <h3>Как это работает</h3>
                     <p>В тета-состоянии мы можем напрямую общаться с Божественным источником, находить и трансформировать глубинные убеждения, страхи и травмы, мешающие жить полноценно и счастливо.</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/theta3.jpg" alt="Преимущества">
+                    <img src="images/theta3.jpg" alt="Преимущества Тетахилинга" loading="lazy">
                     <h3>Преимущества</h3>
                     <p>Исцеление тела и души, изменение ограничивающих программ, улучшение отношений и финансов, раскрытие потенциала. Это путь к внутренней свободе, балансу и высокой вибрации жизни.</p>
                 </div>
@@ -581,32 +600,32 @@
             
             <div class="cards-container">
                 <div class="card">
-                    <img src="images/card1.webp" alt="Материальные блага">
+                    <img src="images/card1.webp" alt="Привлечение материальных благ через энергию" loading="lazy">
                     <p>Научитесь <strong>привлекать материальные блага</strong> через энергию</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/card2.webp" alt="Исцеление эмоций">
+                    <img src="images/card2.webp" alt="Работа с эмоциями и убеждениями" loading="lazy">
                     <p>Работайте с <strong>эмоциями и убеждениями</strong>, которые мешают вам двигаться вперёд</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/card3.webp" alt="Духовная связь">
+                    <img src="images/card3.webp" alt="Глубокая связь с собой" loading="lazy">
                     <p>Углубите <strong>связь с собой</strong> и откройте внутреннюю мудрость</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/card4.webp" alt="Энергия изобилия">
+                    <img src="images/card4.webp" alt="Освоение энергии изобилия" loading="lazy">
                     <p>Освойте <strong>энергию изобилия</strong> и начните привлекать нужные ресурсы</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/card5.webp" alt="Целительные практики">
+                    <img src="images/card5.webp" alt="Целительные практики Тетахилинга" loading="lazy">
                     <p>Познайте <strong>целительные практики</strong> и помогайте себе и другим</p>
                 </div>
                 
                 <div class="card">
-                    <img src="images/card6.webp" alt="Уверенность и сила">
+                    <img src="images/card6.webp" alt="Развитие уверенности и внутренней силы" loading="lazy">
                     <p>Развивайте <strong>уверенность и внутреннюю силу</strong> через практику Тетахилинга</p>
                 </div>
             </div>
@@ -617,33 +636,27 @@
 <!-- Секция "Преимущества" -->
 <section id="benefits" class="section">
     <div style="text-align: center;">
-    <img src="images/benefits.jpg" alt="Польза Тетахилинга" style="width: 61%; border-radius: 10px; display: inline-block;">
-</div>
+        <img src="images/benefits.jpg" alt="Польза практики Тетахилинга" style="width: 61%; border-radius: 10px; display: inline-block;" loading="lazy">
+    </div>
     <div class="container">
         <div class="content-block">
             <h2 class="section-title">Онлайн-практикум "25 ключей изобилия"</h2>
             
             <div style="display: flex; flex-direction: column; gap: 30px;">
-    <div style="display: flex; flex-direction: column; gap: 20px; padding-left: 60px; text-align: center;"> <!-- Добавлено text-align: center -->
-        <h3 style="color: #6b496d; font-size: 1.5rem; margin-left: -60px;">Польза практики</h3> <!-- Компенсируем padding-left -->
-        
-        
-        
-        <ul style="list-style-type: disc; padding-left: 0; text-align: left; display: inline-block; margin: 0 auto;"> <!-- Стили для центрированного списка -->
-            <li style="margin-bottom: 10px; text-align: left;">Быстрая трансформация старых блоков и ограничений</li>
-            <li style="margin-bottom: 10px; text-align: left;">Глубокое понимание и гармонизация своих эмоций</li>
-            <li style="margin-bottom: 10px; text-align: left;">Возвращение уверенности в себе и своих силах</li>
-            <li style="margin-bottom: 10px; text-align: left;">Привлечение нужных обстоятельств и ресурсов</li>
-            <li style="margin-bottom: 10px; text-align: left;">Укрепление здоровья и энергетического баланса</li>
-        </ul>
-    </div>
-</div>
+                <div style="display: flex; flex-direction: column; gap: 20px; padding-left: 60px; text-align: center;">
+                    <h3 style="color: #6b496d; font-size: 1.5rem; margin-left: -60px;">Польза практики</h3>
                     
-                    <a href="https://t.me/twentyfivekeybot" class="btn">Записаться на практикум →</a>
+                    <ul style="list-style-type: disc; padding-left: 0; text-align: left; display: inline-block; margin: 0 auto;">
+                        <li style="margin-bottom: 10px; text-align: left;">Быстрая трансформация старых блоков и ограничений</li>
+                        <li style="margin-bottom: 10px; text-align: left;">Глубокое понимание и гармонизация своих эмоций</li>
+                        <li style="margin-bottom: 10px; text-align: left;">Возвращение уверенности в себе и своих силах</li>
+                        <li style="margin-bottom: 10px; text-align: left;">Привлечение нужных обстоятельств и ресурсов</li>
+                        <li style="margin-bottom: 10px; text-align: left;">Укрепление здоровья и энергетического баланса</li>
+                    </ul>
                 </div>
-                
-                <div> </div>
             </div>
+            
+            <a href="https://t.me/twentyfivekeybot" class="btn" aria-label="Записаться на практикум" rel="noopener noreferrer">Записаться на практикум →</a>
         </div>
     </div>
 </section>
@@ -657,17 +670,17 @@
             <div style="text-align: center;">
                 <p>© 2025 Алия Свиридова. Все права защищены.</p>
                 <p>Астана, Казахстан</p>
-              <p>Тел.: +7 777 689 68 77</p>
-              <p>Email: alialubov@gmail.com</p>
+                <p>Тел.: +7 777 689 68 77</p>
+                <p>Email: alialubov@gmail.com</p>
                 
                 <div class="footer-links">
                     <a href="privacy.html" style="color: #FFD700;">Политика конфиденциальности</a>
                     <a href="offer.html" style="color: #FFD700;">Договор оферты</a>
-                    <a href="https://t.me/aliyakati" style="color: #FFD700;">
-                        <i class="fab fa-telegram"></i> Telegram
+                    <a href="https://t.me/aliyakati" style="color: #FFD700;" rel="noopener noreferrer">
+                        <i class="fab fa-telegram" aria-hidden="true"></i> Telegram
                     </a>
-                    <a href="https://www.instagram.com/aliyakatifovna/#" style="color: #FFD700;">
-                        <i class="fab fa-instagram"></i> Instagram
+                    <a href="https://www.instagram.com/aliyakatifovna/#" style="color: #FFD700;" rel="noopener noreferrer">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
                     </a>
                 </div>
             </div>
@@ -691,6 +704,14 @@
                     behavior: 'smooth'
                 });
             }
+        });
+    });
+
+    // Загрузка CSS после загрузки страницы
+    window.addEventListener('load', function() {
+        const links = document.querySelectorAll('link[rel="preload"][as="style"]');
+        links.forEach(link => {
+            link.rel = 'stylesheet';
         });
     });
 </script>
