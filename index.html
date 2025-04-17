@@ -49,13 +49,12 @@
         }
         
         .hero-section {
-            min-height: 35vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
-                        url('images/bg7.jpg') center/cover no-repeat;
-        }
+		min-height: 35vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: url('images/bg7.jpg') center/cover no-repeat;
+		}
         
         #about {
             background: rgba(255,240,245,0.7) url('images/bg1.jpg') center/cover no-repeat;
@@ -288,14 +287,15 @@
             color: #333;
             border: none;
             padding: 14px;
-            width: 260px;
+            width: auto;
             border-radius: 8px;
             font-size: 1rem;
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             text-decoration: none;
-            margin: 15px auto 0;
+            margin: 0;
+			padding: 14px 25px;
             background-size: 200% auto;
             text-align: center;
         }
@@ -496,6 +496,7 @@
 <body>
 
 <!-- Герой секция -->
+<!-- Герой секция -->
 <section class="hero-section section">
     <div class="container">
         <div class="hero-content">
@@ -643,20 +644,40 @@
             <h2 class="section-title">Онлайн-практикум "25 ключей изобилия"</h2>
             
             <div style="display: flex; flex-direction: column; gap: 30px;">
-                <div style="display: flex; flex-direction: column; gap: 20px; padding-left: 60px; text-align: center;">
-                    <h3 style="color: #6b496d; font-size: 1.5rem; margin-left: -60px;">Польза практики</h3>
+              <div style="display: flex; flex-direction: column; gap: 20px; padding-left: 60px; text-align: center;">
+                <h3 style="color: #6b496d; font-size: 1.5rem; margin-left: -60px;">Что вас ждет:</h3>
                     
-                    <ul style="list-style-type: disc; padding-left: 0; text-align: left; display: inline-block; margin: 0 auto;">
-                        <li style="margin-bottom: 10px; text-align: left;">Быстрая трансформация старых блоков и ограничений</li>
-                        <li style="margin-bottom: 10px; text-align: left;">Глубокое понимание и гармонизация своих эмоций</li>
-                        <li style="margin-bottom: 10px; text-align: left;">Возвращение уверенности в себе и своих силах</li>
-                        <li style="margin-bottom: 10px; text-align: left;">Привлечение нужных обстоятельств и ресурсов</li>
-                        <li style="margin-bottom: 10px; text-align: left;">Укрепление здоровья и энергетического баланса</li>
-                    </ul>
-                </div>
+                  <ul style="list-style-type: disc; padding-left: 0; text-align: left; display: inline-block; margin: 0 auto;">
+                      <li style="margin-bottom: 10px; text-align: left;">Быстрая трансформация старых блоков и ограничений</li>
+                      <li style="margin-bottom: 10px; text-align: left;">Глубокое понимание и гармонизация своих эмоций</li>
+                      <li style="margin-bottom: 10px; text-align: left;">Возвращение уверенности в себе и своих силах</li>
+                      <li style="margin-bottom: 10px; text-align: left;">Привлечение нужных обстоятельств и ресурсов</li>
+                      <li style="margin-bottom: 10px; text-align: left;">Укрепление здоровья и энергетического баланса</li>
+					  <li style="margin-bottom: 10px; text-align: left;">Стоимость участия на обычном тарифе <strong>бесплатное</strong></li>
+					  <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px; color: #cc6600;">
+    💎 Тариф VIP — для тех, кто хочет больше
+  </h2>
+  <ul style="list-style: none; padding: 0; font-size: 18px; color: #333;">
+    <li style="margin-bottom: 12px;">✅ Индивидуальная поддержка</li>
+    <li style="margin-bottom: 12px;">✅ Ответы на личные вопросы</li>
+    <li style="margin-bottom: 12px;">✅ Глубокая проработка запросов</li>
+    <li style="margin-bottom: 12px;">✅ Доступ к дополнительным материалам</li>
+  </ul>
+  <p style="text-align: center; font-weight: bold; font-size: 20px; color: #cc0000; margin-top: 20px;">
+    Стоимость: 1000 тг
+  </p>
+                  </ul>
+              </div>
             </div>
             
-            <a href="https://t.me/twentyfivekeybot" class="btn" aria-label="Записаться на практикум" rel="noopener noreferrer">Записаться на практикум →</a>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+    <a href="https://www.myuppy.com/11" class="btn" aria-label="Записаться на практикум" rel="noopener noreferrer">
+        Записаться на практикум →
+    </a>
+    <a href="robokassa" class="btn" aria-label="Записаться на практикум" rel="noopener noreferrer">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Оплата <strong>VIP</strong>→&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
+    </a>
+</div>
         </div>
     </div>
 </section>
@@ -671,11 +692,12 @@
                 <p>© 2025 Алия Свиридова. Все права защищены.</p>
                 <p>Астана, Казахстан</p>
                 <p>Тел.: +7 777 689 68 77</p>
-                <p>Email: alialubov@gmail.com</p>
+                <p>Email: sviridova.aliya@gmail.com</p>
                 
                 <div class="footer-links">
                     <a href="privacy.html" style="color: #FFD700;">Политика конфиденциальности</a>
                     <a href="offer.html" style="color: #FFD700;">Договор оферты</a>
+					<a href="Rekvizity.html" style="color: #FFD700;">Юридическая информация</a>
                     <a href="https://t.me/aliyakati" style="color: #FFD700;" rel="noopener noreferrer">
                         <i class="fab fa-telegram" aria-hidden="true"></i> Telegram
                     </a>
