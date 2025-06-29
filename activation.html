@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АКТИВАЦИЯ СЧАСТЬЯ - Авторский онлайн-курс Алии Свиридовой</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Цветовая гамма: оранжевый + фиолетовый */
+            --primary-orange: #E67E22;
+            --accent-purple: #8E44AD;
+            --background-light: #FDF2E9;
+            --secondary-color: #4A5568;
+            --white-color: #FFFFFF;
+            --bg-color: #FDFDFD;
+            --footer-bg: #343a40;
+            --whatsapp-green: #25D366; 
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em; 
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-orange);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- Hero Section Mobile First --- */
+        .hero {
+            background-color: var(--background-light); 
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .hero-content .subtitle {
+            font-size: 1em;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .hero-content .tagline {
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .author-photo {
+            width: 150px;
+            height: 150px;
+            background-color: var(--white-color);
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 4px solid var(--white-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            background-image: url('images/author.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-orange);
+            color: var(--white-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(230, 126, 34, 0.4);
+        }
+        
+        /* --- Общие стили для секций со списками --- */
+        .list-section ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .list-section li {
+            background-color: var(--white-color);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            font-size: 0.95em;
+        }
+        
+        .list-section li::before {
+            content: '✓';
+            color: var(--primary-orange);
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* --- Специфичные стили для нового блока --- */
+        #why-this-course .intro-text {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+        #why-this-course h3 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        /* --- Program Section --- */
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .module-card {
+            background-color: var(--white-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .module-header {
+            background: var(--accent-purple);
+            color: var(--white-color);
+            padding: 15px;
+        }
+        
+        .module-header h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .module-body {
+            padding: 15px;
+        }
+        
+        .module-body .result {
+            font-weight: 500;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--accent-purple);
+            padding-left: 8px;
+            font-size: 0.9em;
+        }
+
+        .module-body ol {
+            padding-left: 18px;
+            font-size: 0.85em;
+        }
+        
+        .module-body li {
+            margin-bottom: 5px;
+        }
+
+        /* --- CTA Section --- */
+        .cta-section {
+            background-color: var(--primary-orange);
+            text-align: center;
+            color: var(--white-color);
+            padding: 40px 0;
+        }
+        .cta-section h2 {
+            color: var(--white-color);
+            font-size: 1.8em;
+        }
+        .cta-section h2::after {
+            background: var(--white-color);
+        }
+        .cta-section .cta-button {
+             background: var(--white-color);
+             color: var(--primary-orange);
+        }
+        
+        /* --- FAQ Section --- */
+        .faq-item {
+            background: var(--white-color);
+            margin-bottom: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item summary {
+            padding: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            font-size: 0.95em;
+        }
+        
+        .faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3em;
+            color: var(--primary-orange);
+            transition: transform 0.3s;
+        }
+
+        .faq-item[open] summary::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0 15px 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+        }
+
+        /* --- Contact Button Section --- */
+        .contact-btn-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--whatsapp-green);
+            color: var(--white-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-button svg {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--footer-bg);
+            color: #adb5bd;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+        .footer p {
+            margin: 4px 0;
+        }
+        .footer a {
+            color: var(--white-color);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .legal-links {
+            margin-top: 10px;
+        }
+        .footer .legal-links a {
+            margin: 0 10px;
+            color: #adb5bd;
+        }
+        .footer-divider {
+            border: 0;
+            height: 1px;
+            background-color: #495057;
+            margin: 15px auto;
+            width: 70%;
+        }
+        .footer-legal {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* --- Desktop adjustments (min-width: 768px) --- */
+        @media (min-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+            h2 {
+                font-size: 2.5em;
+            }
+
+            .hero {
+                background: linear-gradient(135deg, var(--background-light), var(--primary-orange));
+                color: var(--white-color);
+                text-align: center;
+                padding: 80px 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero-content {
+                background-color: transparent;
+                padding: 0;
+                margin-bottom: 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.5em;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                color: var(--white-color);
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                color: var(--white-color);
+            }
+            
+            .hero-content .tagline {
+                margin-bottom: 30px;
+                color: var(--white-color);
+            }
+
+            .author-photo {
+                width: 180px;
+                height: 180px;
+                margin: 30px auto;
+                border: 5px solid var(--white-color);
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1em;
+            }
+
+            .list-section ul {
+                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .list-section li {
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 1em;
+            }
+            
+            .list-section li::before {
+                font-size: 1.5em;
+                margin-right: 15px;
+            }
+
+            #why-this-course ul {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            }
+
+            .program-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .module-header { padding: 20px; }
+            .module-header h3 { font-size: 1.3em; }
+            .module-body { padding: 20px; }
+            
+            .module-body .result {
+                margin-bottom: 15px;
+                padding-left: 10px;
+                font-size: 1em;
+            }
+
+            .module-body ol {
+                padding-left: 20px;
+                font-size: 1em;
+            }
+            
+            .module-body li { margin-bottom: 8px; }
+            .cta-section { padding: 60px 0; }
+            .cta-section h2 { font-size: 2.5em; }
+
+            .faq-item summary { padding: 20px; font-size: 1em; }
+            .faq-item summary::after { right: 20px; font-size: 1.5em; }
+            .faq-answer { padding: 0 20px 20px; font-size: 1em; }
+
+            .footer { padding: 40px 0; font-size: 0.9em; }
+            .footer-divider { margin: 20px auto; width: 80%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Первый экран -->
+    <header class="hero">
+        <div class="container">
+            <div class="author-photo">
+                <!-- Фото будет загружено из папки images -->
+            </div>
+            <div class="hero-content">
+                <h1>АКТИВАЦИЯ СЧАСТЬЯ</h1>
+                <p class="subtitle">Авторский онлайн-курс Алии Свиридовой</p>
+                <p class="tagline">Формат мастер-группы с индивидуальным сопровождением</p>
+                <a href="https://forms.yandex.ru/u/685fb69590fa7bd536d80db1/" target="_blank" class="cta-button">Записаться в анкету предзаписи</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- СТАРЫЙ БЛОК -->
+        <section id="for-whom" class="list-section">
+            <div class="container">
+                <h2>Для кого эта программа?</h2>
+                <ul>
+                    <li>Для тех, кто хочет улучшить отношения, финансы, здоровье и жить яркую и изобильную жизнь.</li>
+                    <li>Для тех, кто чувствует, что создан для чего-то большего и хочет раскрыть свою истинную силу и обрести уверенность в своей Миссии.</li>
+                    <li>Для тех, кто понимает, что по-старому уже не работает, а по-новому не знает как.</li>
+                    <li>Для тех, кто устал от проблем, нехватки энергии и потери мотивации.</li>
+                    <li>Для тех, кто хочет наладить свое физическое и психоэмоциональное здоровье.</li>
+                    <li>Для тех, кто хочет быть СЧАСТЛИВЫМ КАЖДЫЙ ДЕНЬ!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- НОВЫЙ БЛОК -->
+        <section id="why-this-course" class="list-section" style="padding-top: 0;">
+            <div class="container">
+                <h2>Кому стоит пройти этот курс?</h2>
+                <p class="intro-text">Если вы читаете этот текст, то точно вам.<br>Вы ведь не случайно оказались на этой странице.</p>
+                <h3>На курсе вы узнаете:</h3>
+                <ul>
+                    <li>Как управлять своим состоянием, влиять на происходящие с вами события, достигать поставленных целей и привлекать в свою жизнь самое лучшее.</li>
+                    <li>Обретёте поддерживающее окружение и получите доступ в чат единомышленников.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Программа курса -->
+        <section id="program" style="background-color: var(--white-color);">
+            <div class="container">
+                <h2>Программа курса: 6 недель</h2>
+                <div class="program-grid">
+                    <!-- Модуль 1 -->
+                    <div class="module-card">
+                        <div class="module-header"><h3>Неделя 1: Эмоционально-физическая стабильность</h3></div>
+                        <div class="module-body">
+                            <p class="result"><strong>Результат:</strong> Переосмысление мотивации и новый подход к своей жизни, понимание связи эмоций и здоровья.</p>
+                            <ol>
+                                <li>Гипоталамо-гипофизарная система</li>
+                                <li>Гормоны счастья</li>
+                                <li>Питание и удовольствие</li>
+                                <li>Спорт и удовольствие</li>
+                                <li>Медитации и удовольствие</li>
+                                <li>Деньги как источник радости</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Модуль 2 -->
+                    <div class="module-card">
+                        <div class="module-header"><h3>Неделя 2: Работа с убеждениями</h3></div>
+                        <div class="module-body">
+                            <p class="result"><strong>Результат:</strong> Очищение от старых установок, изменение “базовых настроек”, обретение яркости и вкуса к жизни.</p>
+                            <ol>
+                                <li>Убираем запреты на радость, удовольствие</li>
+                                <li>Убираем запрет на изобилие</li>
+                                <li>Раскрытие Миссии</li>
+                                <li>Сексуальная энергия и деньги</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Модуль 3 -->
+                    <div class="module-card">
+                        <div class="module-header"><h3>Неделя 3: Новые цели и ценности</h3></div>
+                        <div class="module-body">
+                            <p class="result"><strong>Результат:</strong> Устойчивость, обретение чувства стабильности, легкости и свободы. Новые изобильные отношения.</p>
+                            <ol>
+                                <li>Манифестация</li>
+                                <li>Что блокирует мои истинные желания</li>
+                                <li>Отношения мечты (муж, родители, дети, друзья, коллеги)</li>
+                                <li>Договоренности, диагностика и новые правила</li>
+                                <li>Моя цель в отношениях, здоровье, деньгах, свободе</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Модуль 4 -->
+                    <div class="module-card">
+                        <div class="module-header"><h3>Неделя 4: Проявленность</h3></div>
+                        <div class="module-body">
+                            <p class="result"><strong>Результат:</strong> Освобождение от чувства вины, стыда, стеснения. Обретение смелости заявить о себе и истинной силы.</p>
+                            <ol>
+                                <li>Настоящая свобода быть собой</li>
+                                <li>Формирование событий мечты</li>
+                                <li>Идеи и вдохновение для исполнения желаний</li>
+                                <li>Между мыслью и действием</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Модуль 5 (ОБНОВЛЕННЫЙ) -->
+                    <div class="module-card">
+                        <div class="module-header"><h3>Неделя 5: Для продвинутых пользователей интуиции</h3></div>
+                        <div class="module-body">
+                            <p class="result"><strong>Результат:</strong> Научитесь сильнее чувствовать свой путь, видеть какие из ближайших событий будут происходить в вашей жизни и как сделать так, чтобы они складывались наилучшим образом. Узнаете как перестать создавать конфликтные ситуации и поймете глубинные задачи души и как проходить их через счастье.</p>
+                            <ol>
+                                <li>Семья души. Как получить базовую поддержку от рода.</li>
+                                <li>Божественное расписание. Узнаете для чего большего вы пришли в этот Мир.</li>
+                                <li>Воины добра и света. Почему я чувствую усталость утром, как будто работал всю ночь. Почему бывает тяжело проснуться и как это изменить.</li>
+                                <li>Совет двенадцати.</li>
+                                <li>Ченнелинг. Как активировать поток информации для того, чтобы получать ответы на все вопросы.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Модуль 6 -->
+                    <div class="module-card">
+                        <div class="module-header"><h3>Неделя 6: Создание новой реальности</h3></div>
+                        <div class="module-body">
+                            <p class="result"><strong>Результат:</strong> Узнаете, как создавать желаемые события и выбирать ветку реальности для счастливой версии себя.</p>
+                            <ol>
+                                <li>Что берем в каждый день</li>
+                                <li>Вспомнить будущее</li>
+                                <li>Планирование из будущего</li>
+                                <li>2 кита осознанности</li>
+                                <li>Домашнее задание на всю жизнь</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Секция с призывом к действию -->
+        <section id="pre-register" class="cta-section">
+            <div class="container">
+                <h2>Готовы активировать свое счастье?</h2>
+                <p>Запишитесь в анкету предзаписи, чтобы первыми узнать о старте и получить возможность зайти на программу на самых выгодных условиях.</p>
+                <br>
+                <a href="https://forms.yandex.ru/u/685fb69590fa7bd536d80db1/" target="_blank" class="cta-button">Заполнить анкету</a>
+            </div>
+        </section>
+
+        <!-- Частые вопросы -->
+        <section id="faq">
+            <div class="container">
+                <h2>Частые вопросы</h2>
+                <details class="faq-item">
+                    <summary>Есть ли рассрочка?</summary>
+                    <div class="faq-answer">
+                        <p>Да, мы предоставляем возможность оплаты курса в рассрочку. Подробности можно будет узнать при старте продаж.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Нужно ли уже быть тета-практиком?</summary>
+                    <div class="faq-answer">
+                        <p>Нет. Эта программа подходит в том числе совершенно новичкам в различных методиках и практиках.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Если я уже проходила курсы по тета-хилингу, будет ли мне полезно?</summary>
+                    <div class="faq-answer">
+                        <p>Да. Это усилит ваши знания и навыки, а также даст новые инструменты и глубину понимания.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Если я не смогу присутствовать онлайн, будут ли уроки в записи?</summary>
+                    <div class="faq-answer">
+                        <p>Да, предусмотрена запись всех эфиров, и вы сможете проходить курс в удобном для вас формате.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Как задать вопрос, если остались?</summary>
+                    <div class="faq-answer">
+                        <p>Вы можете связаться с нами по контактам, указанным внизу страницы, или написать в мессенджеры.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Новая секция с кнопкой WhatsApp -->
+        <section class="contact-btn-section">
+            <div class="container">
+                <h2>Остались вопросы?</h2>
+                <a href="https://wa.me/77776896877" target="_blank" class="whatsapp-button">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12.04 2.04c-5.45 0-9.87 4.42-9.87 9.87 0 1.81.5 3.53 1.45 5.06L2.05 22l5.25-1.38c1.47.8 3.16 1.22 4.74 1.22 5.45 0 9.87-4.42 9.87-9.87s-4.42-9.87-9.87-9.87zm.04 18.2c-1.57 0-3.07-.46-4.34-1.34l-.31-.18-3.25.85.87-3.15-.2-.32c-.9-1.44-1.38-3.09-1.38-4.86 0-4.5 3.65-8.15 8.15-8.15 2.19 0 4.2.85 5.72 2.37 1.52 1.52 2.37 3.53 2.37 5.72 0 4.5-3.65 8.15-8.15 8.15zm4.09-5.74c-.22-.11-.53-.26-.74-.37-.21-.12-.46-.18-.68.1-.22.29-.83.99-1.01 1.19-.19.2-.37.22-.69.08-.31-.14-1.32-.49-2.52-1.56-1.92-1.66-2.56-2.77-2.87-3.3-.3-.52-.03-.79.2-.99.19-.19.46-.46.69-.68.22-.22.29-.46.4-.68.11-.22.05-.4-.03-.57-.08-.18-.68-1.65-.93-2.2-.24-.54-.48-.46-.68-.47-.23-.01-.5-.01-.77-.01-.27 0-.7.1-.96.37-.26.27-1.01.99-1.01 2.42s1.04 2.8 1.18 3.03c.14.23 2.05 3.12 4.96 4.35 1.18.51 2.1.82 2.83 1.05.27.09.52.12.72.09.23-.03.68-.28.77-.55.09-.27.09-.5.06-.99-.03-.49-.12-.8-.26-.99z"/></svg>
+                    Задать вопрос в WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ПОДВАЛ (ОБНОВЛЕННЫЙ) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-legal">
+                <p>ИП Свиридова Алия Катифовна</p>
+                <p>ИИН: 830523450138</p>
+                <p>Email: <a href="mailto:aliya@sviridovaaliya.ru">aliya@sviridovaaliya.ru</a></p>
+                <p>© 2025 Алия Свиридова. Все права защищены.</p>
+            </div>
+            
+            <hr class="footer-divider">
+
+            <div class="legal-links">
+                <a href="https://sviridovaaliya.ru/desktop/offer.html" target="_blank">Договор-оферта</a>
+                <a href="https://sviridovaaliya.ru/desktop/privacy.html" target="_blank">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
